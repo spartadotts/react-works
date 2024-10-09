@@ -34,7 +34,7 @@ export default function Randomgen() {
   return (
     <div
       className="container"
-      style={{ background: color, width: "100vw", height: "100vh" }}
+      style={{ background: color, width: "100vw", height: "80vh" }}
     >
       <div className="buttons" style={{ textAlign: "center" }}>
         <button onClick={() => setTypeofColor("hex")}>
