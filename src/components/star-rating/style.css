@@ -1,0 +1,12 @@
+.active{
+    color: gold;
+}
+
+.inactive{
+    color: black;
+}
+
+.star-rating{
+    margin-top: 30px;
+    text-align: center;
+}
