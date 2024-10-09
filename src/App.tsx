@@ -1,6 +1,7 @@
 
 /* import './App.css' */
 import Accordian from './components/accordian/Accordian'
+import Randomgen from './components/color-gen/Randomgen'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
 
     <div>
       <Accordian/>
+      <Randomgen/>
     </div>
   )
 }
