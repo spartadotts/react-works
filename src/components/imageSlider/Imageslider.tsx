@@ -5,7 +5,6 @@ import "./style.css";
 type ImagsliderProps = {
   url: string;
   limit: number;
-  download_url: string;
 };
 
 export default function Imagslider({ url, limit }: ImagsliderProps) {
