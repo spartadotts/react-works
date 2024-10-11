@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
+import "./style.css";
 
 type ImagsliderProps = {
   url: string;
   limit: number;
+  download_url: string;
 };
 
 export default function Imagslider({ url, limit }: ImagsliderProps) {
@@ -31,9 +34,9 @@ export default function Imagslider({ url, limit }: ImagsliderProps) {
       }
     };
     fetchData();
-  }, [url,limit]);
+  }, [url, limit]);
 
-  console.log(images)
+  console.log(images);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -43,5 +46,61 @@ export default function Imagslider({ url, limit }: ImagsliderProps) {
     return <div>Oops...Error occurred while fetching</div>;
   }
 
-  return <div></div>;
+  function handleLeftClick() {
+    setSlide(slide === 0 ? images.length - 1 : slide - 1);
+  }
+
+  function handleRightClick() {
+    setSlide(slide === images.length - 1 ? 0 : slide + 1);
+  }
+
+  return (
+    <div className="main-container">
+      <BsArrowLeftCircleFill
+        className="arrow arrow-left"
+        onClick={handleLeftClick}
+      />
+      {images && images.length ? (
+        images.map((image, index) => {
+          return (
+            <img
+              key={image.id}
+              alt={image.download_url}
+              src={image.download_url}
+              className={
+                slide === index
+                  ? "current-image"
+                  : "current-image hide-current-image"
+              }
+            ></img>
+          );
+        })
+      ) : (
+        <div>Oops no images found</div>
+      )}
+      <BsArrowRightCircleFill
+        className="arrow arrow-right"
+        onClick={handleRightClick}
+      />
+      <span className="circle-indicators">
+        {images && images.length
+          ? images.map((_, index) => {
+              return (
+                <button
+                  key={index}
+                  className={
+                    slide === index
+                      ? "button-image"
+                      : "button-image hide-button-image"
+                  }
+                  onClick={() => {
+                    setSlide(index);
+                  }}
+                ></button>
+              );
+            })
+          : null}
+      </span>
+    </div>
+  );
 }
