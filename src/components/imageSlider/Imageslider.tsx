@@ -35,8 +35,6 @@ export default function Imagslider({ url, limit }: ImagsliderProps) {
     fetchData();
   }, [url, limit]);
 
-  console.log(images);
-
   if (loading) {
     return <div>Loading...</div>;
   }
