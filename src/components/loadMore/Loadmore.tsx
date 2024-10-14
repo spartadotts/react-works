@@ -40,5 +40,17 @@ export default function LoadMore() {
     return <div>Oops! Error while loading...</div>;
   }
 
-  return <div className="container"></div>;
+  return (
+    <div className="container">
+      <div className="product-list">
+        {products && products.length > 0
+          ? products.map((item) => (
+              <div key={item.id}>
+                <img src={item.title}></img>
+              </div>
+            ))
+          : null}
+      </div>
+    </div>
+  );
 }
