@@ -1,0 +1,9 @@
+.menuItem p{
+    display: inline-block;
+    margin-right: 5px;
+
+}
+
+.content span{
+    cursor: pointer;
+}
