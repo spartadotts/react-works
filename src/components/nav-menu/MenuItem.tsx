@@ -25,7 +25,7 @@ export default function Menuitem({ item }: { item: MenuItem }) {
         
       </div>
 
-      {item && item.children && item.children.length > 0
+      {item && item.children && item.children.length && displayLabel[item.label]
         ? item.children.map((childItem) => <Menuitem item={childItem} />)
         : null}
     </ul>
