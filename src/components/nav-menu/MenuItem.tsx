@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MenuItem } from "./interface";
 import "./style.css";
+import { FaPlus,FaMinus } from "react-icons/fa";
 
 export default function Menuitem({ item }: { item: MenuItem }) {
   //receiving a single item here so we need to specify the type of the single item in the object
@@ -22,7 +23,7 @@ export default function Menuitem({ item }: { item: MenuItem }) {
         <p>{item.label}</p>
         {item && item.children && item.children.length > 0 ? (
           <span onClick={() => handleToggle(item.label)}>
-            {displayLabel[item.label] ? "-" : "+"}
+            {displayLabel[item.label] ? <FaMinus/> : <FaPlus/>}
           </span>
         ) : null}
       </div>
