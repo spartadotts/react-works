@@ -1,9 +1,16 @@
 .menuItem p{
     display: inline-block;
     margin-right: 5px;
+    color: azure;
 
 }
 
 .content span{
     cursor: pointer;
+}
+
+.main-container{
+    height: 100vh;
+    background-color: rgb(44, 44, 146);
+    width: 20vw;
 }
