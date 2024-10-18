@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.light-theme{
+    background-color: azure;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.dark-theme{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.light-theme button{
+    background-color: black;
+    color: azure;
+}
+
+.dark-theme h2{
+    color: azure;
+}
+
+h2{
+        padding: 10px;
+}
+
+button{
+   margin: 10px;
+   width: fit-content;
+   padding: 5px;
+   border-radius: 30px;
+}

@@ -1,5 +1,6 @@
 import "./App.css";
-import Qrcode from "./components/QRcode/Qrcode";
+import Themeswticher from "./components/ThemeSwitcher/Themeswitcher";
+/* import Qrcode from "./components/QRcode/Qrcode"; */
 /* import data from "./components/nav-menu/data" */
 /* import Accordian from "./components/accordian/Accordian";
 import Randomgen from "./components/color-gen/Randomgen";
@@ -18,7 +19,8 @@ function App() {
       <Imagslider url={"https://picsum.photos/v2/list?page=1&"} limit={10} /> */}
       {/* <LoadMore/> */}
       {/* <NavBar menu={data as MenuItem[]}/> */}
-      <Qrcode/>
+      {/* <Qrcode/> */}
+      <Themeswticher/>
     </div>
   );
 }
